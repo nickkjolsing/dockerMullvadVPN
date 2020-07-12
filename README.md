@@ -1,4 +1,5 @@
 # mullvadVPN Docker container
+![Image of Docker](https://i1.pngguru.com/preview/96/77/258/cloud-logo-docker-software-deployment-devops-virtual-machine-microservices-anaconda-rightscale-png-clipart.jpg)
 ### Mullvad VPN container for docker. Example on how to setup Transmission with container at the bottom of the page.  
 #### [Docker container that this relys on](https://github.com/yacht7/docker-openvpn-client)
 
@@ -64,7 +65,7 @@ So you want to allow other containers to use this connection? Ok fine...
 ### Hypothetical Transmission example
 1. Add ```network_mode: container:openvpn-client``` to docker compose file
 2. Make sure to add ports to VPN docker compose file, like in my example above
-    1. These ports will be the ports required by the application running in the container you're routing through the VPN. Ex: 5665 would be for the Transmission Web UI in this situation
+    1. These ports will be the ports required by the application running in the container you're routing through the VPN. Ex: 5665 would be to access the Transmission Web UI in this situation
 
 ---
     version: "2.1"
