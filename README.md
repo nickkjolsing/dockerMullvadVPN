@@ -1,5 +1,5 @@
 # mullvadVPN Docker container
-### Docker compose to create a container that allows for other containers to use a VPN connection provided by Mullvad. 
+### Mullvad VPN container for docker. Example on how to setup Transmission with container at the bottom of the page.  
 #### [Docker container that this relys on](https://github.com/yacht7/docker-openvpn-client)
 
 # 
