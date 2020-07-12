@@ -49,7 +49,7 @@
 3. Let's get [jiggy](https://youtu.be/3JcmQONgXJM?t=1) wit that sparkly new container:
     1. In a new terminal window, find docker container ID ```docker ps```
     2. Type ```docker exec -it <container ID from above> /bin/sh```
-    3. Now that you're into the shell of your VPN container we're going to check it's IP
+    3. Now that you're into the shell of your VPN container we're going to check it's public IP
     4. ```wget -qO- http://ipecho.net/plain | xargs echo``` will return your container's public IP
     5. Lookup this IP's information to see if it's the same country/city you seutp in your docker compose file. I'll let you find a site
 
