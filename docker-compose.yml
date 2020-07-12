@@ -1,0 +1,20 @@
+---
+    version: "2"
+    services:
+      openvpn-client:
+        image: yacht7/openvpn-client            # Image on Docker. Shoutout to yacht7
+        container_name: openvpn-client
+        cap_add:
+            - NET_ADMIN                         # Needs to be here
+        environment: 
+            - KILL_SWITCH=true                  # Turns off internet access if the VPN connection drops
+            - FORWARDED_PORTS=5794              # NUMBER TO REMEMBER FROM BEFORE, READ STEP 7 under STEP 1 (THIS IS CONFUSING AS IM TYPING IT, BUT READ IT)
+        devices:
+            - /dev/net/tun                      
+        volumes:
+            - /Volumes/Luigi/docker/mullvadVPN/config/mullvad_config_linux_ch_zrh:/data/vpn   
+            # File unzipped before from Mullvad, it's location. Make sure to keep the ":/data/vpn" part at the end
+        ports:
+            - 5665:5665                         # Opening port for to access hypothetical Transmission container that would be routing through this VPN
+            - 1500:1500                         # Opening port for other application routing through VPN
+        restart: unless-stopped
