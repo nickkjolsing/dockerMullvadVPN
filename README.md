@@ -57,8 +57,10 @@
 Now go browse the internet from 🇨🇭Switzerland or somethin
 # 
 ## Bonus section: Route other container's connection through this VPN
-So you want to allow other containers to use this connection!? Ok fine...
+So you want to allow other containers to use this connection? Ok fine...
 #### Add ```network_mode: container:openvpn-client``` to the container's compose file
+#### Add ```ports:``` to the VPN's compose file
+
 ### Hypothetical Transmission example
 1. Add ```network_mode: container:openvpn-client``` to docker compose file
 2. Make sure to add ports to VPN docker compose file, like in my example above
