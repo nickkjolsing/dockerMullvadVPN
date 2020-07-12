@@ -1,5 +1,5 @@
 # mullvadVPN Docker container
-![Image of Docker](https://png2.cleanpng.com/sh/a75edb82bcd89ff6b066e34a79e4f8d6/L0KzQYm3WMAzN6d1R91yc4Pzfri0lgNqdpgyfNHsa3X1PbXslvVtd6Fuhtk2YX7nPbXskPxwgZpzf598b3b3h7L5hb14cV5ph9V0ZYKwcbBrTfRwa5xqittFaX7qPcTwjgBtbV5zh9ZuLXr2PbL3kPxqa5J5gdH3LUXlRoTpgcQ4bWYAeaY6LkS1RIm3VsA2OWY4S6QBMkSzR4q7UMUveJ9s/kisspng-using-docker-developing-and-deploying-software-wi-docker-and-dockerizing-simple-node-js-application-5b63ba47e59a41.4248060515332624079405.png)
+![Image of Docker](https://regmedia.co.uk/2014/11/28/docker_logo.jpg)
 ### Mullvad VPN container for docker. Example on how to setup Transmission with container at the bottom of the page.  
 #### [Docker container that this relys on](https://github.com/yacht7/docker-openvpn-client)
 
