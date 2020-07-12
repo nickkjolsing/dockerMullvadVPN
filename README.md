@@ -43,7 +43,7 @@
             - 1500:1500                         # Opening port for other application routing through VPN
         restart: unless-stopped
 
-### Step 3: Testing for real VPN connection
+### Step 3: Confirming VPN connection is active within container
 1. ```cd``` into folder where the ```docker-compose.yml``` for this container is stored
 2. Awaken the beast with ```docker-compose up```
 3. Let's get [jiggy](https://youtu.be/3JcmQONgXJM?t=1) wit that sparkly new container:
