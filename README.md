@@ -14,13 +14,13 @@
 ### Step 1: Getting Mullvad configuration .zip file
 1. Login [to account on Mullvad.net](https://mullvad.net/en/account/#/)
 2. Visit: [OpenVPN configuration file generator on their website](https://mullvad.net/en/account/#/openvpn-config/?platform=linux)
-3. Select favorite country and the city within that country!
+3. Select your favorite country and city within that country!
 4. Under advanced settings: toggle ```UDP 53```
-5. Download zip archive, unarchive it into a regular folder, and place within a directory accessable by your Docker container
+5. Download zip archive, unarchive it into a regular folder, and place within a directory accessable by your Docker containers
 6. Return to ```My account``` and click [Manage ports and WireGuard keys](https://mullvad.net/en/account/#/ports)
 7. Next to a public key click the green ```+```. This adds a port that will be used for configuring OpenVPN. REMEMBER THIS NUMBER FOR LATER :)
 
-### Step 2: Setup docker-compose file
+### Step 2: Setup ```docker-compose``` file
  
     ---
     version: "2"
