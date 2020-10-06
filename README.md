@@ -1,5 +1,5 @@
 # mullvadVPN Docker container
-![Image of Docker](https://miro.medium.com/max/2404/1*JUOITpaBdlrMP9D__-K5Fw.png) ![Image of Mullvad](https://www.aeres-evaluation.fr/wp-content/uploads/2019/07/mullvad-vpn-logo.png)
+![Image of Docker](https://pbs.twimg.com/profile_images/1273307847103635465/lfVWBmiW_400x400.png) ![Image of Mullvad](https://www.aeres-evaluation.fr/wp-content/uploads/2019/07/mullvad-vpn-logo.png)
 ### Mullvad VPN container for docker. Example on how to setup Transmission with container at the bottom of the page.  
 #### [Docker container that this relys on](https://github.com/yacht7/docker-openvpn-client)
 
