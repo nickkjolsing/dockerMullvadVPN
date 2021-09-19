@@ -32,8 +32,9 @@
         cap_add:
             - NET_ADMIN                         # Needs to be here
         environment: 
-            - KILL_SWITCH=true                  # Turns off internet access if the VPN connection drops
-            - FORWARDED_PORTS=5794              # NUMBER TO REMEMBER FROM BEFORE, READ STEP 7 under STEP 1 (THIS IS CONFUSING AS IM TYPING IT, BUT READ IT)
+            - KILL_SWITCH=on                         # Turns off internet access if the VPN connection drops
+            - FORWARDED_PORTS=5794                   # NUMBER TO REMEMBER FROM BEFORE, READ STEP 7 under STEP 1 (THIS IS CONFUSING AS IM TYPING IT, BUT READ IT)
+            - SUBNETS=192.168.0.0/24,192.168.1.0/24  # Allows for the service to be accessed through LAN
         devices:
             - /dev/net/tun                      
         volumes:
