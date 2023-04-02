@@ -24,16 +24,16 @@
 ### Step 2: Setup ```docker-compose``` file
  
     ---
-    version: "2"
+    version: "3"
     services:
       openvpn-client:
-        image: yacht7/openvpn-client            # Image on Docker. Shoutout to yacht7
+        image: ghcr.io/wfg/openvpn-client       # Image on Docker. Shoutout to ghcr.io
         container_name: openvpn-client
         cap_add:
             - NET_ADMIN                         # Needs to be here
         environment: 
             - KILL_SWITCH=on                         # Turns off internet access if the VPN connection drops
-            - FORWARDED_PORTS=5794                   # NUMBER TO REMEMBER FROM BEFORE, READ STEP 7 under STEP 1 (THIS IS CONFUSING AS IM TYPING IT, BUT READ IT)
+            - FORWARDED_PORTS=nl-ams-59103           # NUMBER TO REMEMBER FROM BEFORE, READ STEP 7 under STEP 1 (THIS IS CONFUSING AS IM TYPING IT, BUT READ IT)
             - SUBNETS=192.168.0.0/24,192.168.1.0/24  # Allows for the service to be accessed through LAN
         devices:
             - /dev/net/tun                      
