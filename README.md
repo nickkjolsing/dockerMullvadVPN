@@ -18,8 +18,10 @@
 3. Select your favorite country and city within that country!
 4. Under advanced settings: toggle ```UDP 53```
 5. Download zip archive, unarchive it into a regular folder, and place within a directory accessable by your Docker containers
-6. Return to ```My account``` and click [Manage ports and WireGuard keys](https://mullvad.net/en/account/#/ports)
-7. Next to a public key click the green ```+```. This adds a port that will be used for configuring OpenVPN. REMEMBER THIS NUMBER FOR LATER :)
+6. Return to ```My account``` and click [Port forwarding](https://mullvad.net/en/account/#/port-forwarding)
+7. Choose a city from the country you want to route through from the `Select a city` dropdown
+8. Set the `Select a device` dropdown to `No device (only OpenVPN)` and click the `Add port` green button
+9. Make a note of the full new value shown under `ACTIVE PORTS` - e.g. `nl-ams-59103` (country-city-port)
 
 ### Step 2: Setup ```docker-compose``` file
  
@@ -33,7 +35,7 @@
             - NET_ADMIN                         # Needs to be here
         environment: 
             - KILL_SWITCH=on                         # Turns off internet access if the VPN connection drops
-            - FORWARDED_PORTS=nl-ams-59103           # NUMBER TO REMEMBER FROM BEFORE, READ STEP 7 under STEP 1 (THIS IS CONFUSING AS IM TYPING IT, BUT READ IT)
+            - FORWARDED_PORTS=nl-ams-59103           # Enter the full value you noted at step 9 above
             - SUBNETS=192.168.0.0/24,192.168.1.0/24  # Allows for the service to be accessed through LAN
         devices:
             - /dev/net/tun                      
@@ -56,7 +58,7 @@
     5. Lookup this IP's information to see if it's the same country/city you setup in your docker compose file. I'll let you find a site
 
 
-Now go browse the internet from 🇨🇭Switzerland or somethin
+Now go browse the internet from 🇨🇭Switzerland or something
 # 
 ## Bonus section: Route other container's connection through this VPN
 So you want to allow other containers to use this connection? Ok fine...
